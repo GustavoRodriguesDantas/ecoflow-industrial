@@ -1,2 +1,2 @@
 # ecoflow-industrial
-Simulador interativo de linhas de produção sustentáveis desenvolvido em Python/Pygame.
+Simulador de Linha de Produção Sustentável desenvolvido em Python/Pygame para a Semana de Engenharia UniLaSalle.
