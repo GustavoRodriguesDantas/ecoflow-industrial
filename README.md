@@ -4,13 +4,11 @@
 
 ## 🖥️ O Simulador em Ação
 
-![Simulação do EcoFlow](./Simulacao_EcoFlow.png)*Interface do simulador exibindo o fluxo de produção e os KPIs em tempo real.*
+![Simulação do EcoFlow](./Simulacao_EcoFlow.png)
 
 ---
 
 ## 🏆 Reconhecimento Acadêmico
-
-![Foto da Equipe](./Foto%20da%20Equipe.jpeg)*Apresentação do projeto na Semana de Engenharia da UniLaSalle.*
 
 O **EcoFlow** é um projeto desenvolvido para a disciplina de **Lógica de Programação** (3º período de Engenharia de Produção), que une o desenvolvimento de software à análise de dados industriais. O projeto simula uma esteira de produção onde cada decisão logística impacta diretamente na sustentabilidade e viabilidade financeira da operação.
 
