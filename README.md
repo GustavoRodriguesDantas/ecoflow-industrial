@@ -2,7 +2,9 @@
 
 **Simulador de Linha de Produção Sustentável | Foco em Gestão de KPIs e Engenharia de Produção**
 
-![Equipe UniLaSalle](./FotodaEquipe.jpeg)
+![Foto da Equipe](./Foto%20da%20Equipe.jpeg)
+
+*Apresentação do projeto na Semana de Engenharia da UniLaSalle.*
 
 O **EcoFlow** é um projeto desenvolvido para a disciplina de **Lógica de Programação** (3º período de Engenharia de Produção), que une o desenvolvimento de software à análise de dados industriais. O projeto simula uma esteira de produção onde cada decisão logística impacta diretamente na sustentabilidade e viabilidade financeira da operação.
 
