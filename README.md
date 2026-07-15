@@ -1,100 +1,66 @@
-# EcoFlow Industrial 🌿🔄
+# EcoFlow Industrial 🌱🏭
 
-> **EcoFlow Industrial** é um simulador interativo de processos e linhas de produção sustentáveis inspirado no visual de ferramentas modernas de automação *low-code* (como n8n e Node-RED). Desenvolvido como projeto prático para a disciplina de **Lógica de Programação** na **UniLaSalle**, o simulador une a visão analítica da Engenharia de Produção ao desenvolvimento de software para calcular o impacto ambiental e financeiro de operações industriais em tempo real.
+**Simulador de Linha de Produção Sustentável | Foco em Gestão de KPIs e Engenharia de Produção**
 
----
+![Equipe UniLaSalle](./FotodaEquipe.jpeg)
 
-## 📌 Sumário
-- [🎯 Objetivos do Projeto](#-objetivos-do-projeto)
-- [💼 Visão de Produto & Engenharia de Produção](#-visão-de-produto--engenharia-de-produção)
-- [🎨 O Grande Desafio Técnico: Engine Vetorial Própria](#-o-grande-desafio-técnico-engine-vetorial-própria)
-- [⚙️ Arquitetura Computacional & Dados](#-arquitetura-computacional--dados)
-- [📊 Dashboard de KPIs em Tempo Real](#-dashboard-de-kpis-em-tempo-real)
-- [🚀 Onde o EcoFlow Pode Ser Usado?](#-onde-o-ecoflow-pode-ser-usado)
-- [💻 Como Executar o Simulador](#-como-executar-o-simulador)
-- [🔮 Roadmap de Dados (Futuras Integrações)](#-roadmap-de-dados-futuras-integrações)
+O **EcoFlow** é um projeto desenvolvido para a disciplina de **Lógica de Programação** (3º período de Engenharia de Produção), que une o desenvolvimento de software à análise de dados industriais. O projeto simula uma esteira de produção onde cada decisão logística impacta diretamente na sustentabilidade e viabilidade financeira da operação.
 
----
+## 🏆 Reconhecimento Acadêmico
 
-## 🎯 Objetivos do Projeto
+Este projeto teve a honra de ser apresentado e participar da **Semana de Engenharia da UniLaSalle**, um evento que celebra a inovação e o desenvolvimento de soluções práticas na área. A participação reforça o impacto e a relevância do EcoFlow no contexto acadêmico e industrial.
 
-O EcoFlow Industrial nasceu com a missão de conectar a eficiência operacional à sustentabilidade. O software desafia o usuário a desenhar fluxos logicamente viáveis enquanto equilibra métricas ecológicas e financeiras:
+## 🎯 Objetivos do Jogo (e do Projeto)
 
-1. **Promover a Sustentabilidade:** Incentivar decisões industriais que mitiguem o impacto ambiental.
-2. **Simular Processos Complexos:** Prototipar esteiras completas (coleta, processamento, reciclagem e distribuição).
-3. **Monitorar Indicadores:** Apresentar o impacto imediato de escolhas de infraestrutura através de dados visuais.
-4. **Desenvolver Lógica Estratégica:** Utilizar desvios condicionais ($IF/ELSE$) para criar rotas alternativas inteligentes de refugo e retrabalho.
-5. **Incentivar a Economia Circular:** Validar o papel da logística reversa nos resultados do negócio.
+Com base nos objetivos acadêmicos e práticos definidos para o EcoFlow Industrial, o simulador visa:
 
----
+1. **Promover a Sustentabilidade:** Incentivar a adoção de práticas industriais que reduzam o impacto ambiental.
 
-## 💼 Visão de Produto & Engenharia de Produção
+1. **Simular Processos Industriais:** Permitir a montagem e gestão de linhas de produção, abrangendo desde a coleta de matérias-primas até a distribuição.
 
-Como idealizador da visão de produto e líder técnico do projeto, estruturei o EcoFlow para resolver um problema real de gestão industrial: a opacidade de dados ambientais no chão de fábrica. 
+1. **Monitorar Indicadores:** Acompanhar em tempo real KPIs essenciais como CO2, Custo, Reuso e OEE para avaliar o desempenho do processo.
 
-Para demonstrar o potencial da ferramenta, implementamos um fluxo padrão de **Logística Reversa de Polímeros**:
-$$\text{Coletar PET} \longrightarrow \text{Processar} \longrightarrow \text{Verificar Qualidade (IF/ELSE)} \longrightarrow \begin{cases} \text{OK} \longrightarrow \text{Reciclar} \longrightarrow \text{Distribuir} \\ \text{NÃO} \longrightarrow \text{Descartar} \end{cases}$$
+1. **Desenvolver Lógica Estratégica:** Estimular o uso de decisões inteligentes e estruturas condicionais para otimizar resultados.
 
-Essa modelagem permite que gestores analisem exatamente o trade-off financeiro de se investir em uma etapa de triagem de qualidade rigorosa vs. o custo de descarte de matéria-prima.
+1. **Incentivar a Economia Circular:** Valorizar o reuso de materiais e a logística reversa, transformando resíduos em recursos.
 
----
+## 💡 Visão de Produto e Gestão (PM/PO Mindset)
 
-## 🎨 O Grande Desafio Técnico: Engine Vetorial Própria
+Como líder do projeto e principal desenvolvedor, foquei em criar uma ferramenta que não apenas "funcionasse", mas que entregasse **valor analítico**. A arquitetura foi pensada para resolver o problema de visualização de trade-offs em processos industriais:
 
-Um dos maiores desafios identificados no desenvolvimento da interface gráfica em Pygame foi a gestão de *assets* externos. Depender de caminhos de arquivos locais para carregar imagens de ícones tornaria o software altamente instável e difícil de rodar em diferentes sistemas operacionais na apresentação do MVP.
+- **Modelagem de KPIs:** Definição e implementação de métricas críticas (CO2, Custo, OEE, Reuso) para fornecer feedback imediato ao "gestor" da linha.
 
-**A Solução de Engenharia:** Desenvolvi um mecanismo de renderização puramente matemático. Todos os elementos visuais do canvas foram desenhados programaticamente através de primitivas geométricas (`pygame.draw`):
-*   **Ícones de Blocos:** As engrenagens, caminhões de distribuição e símbolos de reciclagem são gerados por cálculos vetoriais em tempo real.
-*   **Linhas de Conexão:** A amarração lógica dos blocos utiliza **Curvas de Bézier Cúbicas**, garantindo o visual fluido de ferramentas de mercado.
+- **User Experience (UX):** Interface intuitiva baseada em fluxos (Drag-and-Drop) para facilitar a prototipagem de diferentes cenários produtivos.
 
-Com isso, o projeto tornou-se **100% autônomo, portátil e leve**.
+- **Escalabilidade:** O sistema de blocos foi projetado para permitir a adição de novos processos e materiais sem necessidade de refatoração do motor de simulação.
 
----
+## 📊 Análise de Dados e Indicadores
 
-## ⚙️ Arquitetura Computacional & Dados
+O motor de simulação utiliza o algoritmo de **Busca em Largura (BFS)** para percorrer o grafo de produção e realizar a agregação de dados em tempo real:
 
-O backend do simulador foi construído sobre conceitos estruturados de **Teoria dos Grafos**:
+| KPI | Descrição | Objetivo Analítico |
+| --- | --- | --- |
+| **OEE** | Eficiência Global do Equipamento | Medir a produtividade e qualidade do fluxo. |
+| **CO2** | Pegada de Carbono | Analisar o impacto ambiental de cada matéria-prima. |
+| **Custo** | Custo Operacional | Avaliar a viabilidade econômica das escolhas. |
+| **Reuso** | Taxa de Circularidade | Monitorar a eficiência da logística reversa e reciclagem. |
 
-### 1. Motor de Simulação via BFS (Busca em Largura)
-O fluxo montado no canvas é interpretado como um Grafo Direcionado. Quando a execução é disparada ("Run Flow"), o algoritmo mapeia os nós raiz (Fontes) e utiliza uma estratégia de **Busca em Largura (BFS)** para navegar pelo processo. Isso garante que nenhuma etapa seja calculada antes que suas dependências anteriores tenham sido processadas.
+## 🛠️ Tecnologias e Conceitos
 
-### 2. Acúmulo Dinâmico de Impacto
-Cada bloco adicionado possui um dicionário de propriedades contendo cargas de dados estáticas. À medida que o pulso da simulação transita pelas Curvas de Bézier, os valores são agregados matematicamente e filtrados por limites realistas:
+- **Linguagem:** Python 3.x (Pygame)
 
-$$KPI_{\text{final}} = \max\left(\text{Min}, \min\left(\text{Max}, \sum_{n \in \text{Caminho}} \Delta KPI_n\right)\right)$$
+- **Engenharia de Software:** Programação Orientada a Objetos (POO), Teoria dos Grafos.
+
+- **Engenharia de Produção:** Gestão de Processos, Sustentabilidade Industrial, Logística Reversa, Análise de KPIs.
+
+## 🚀 Como Executar
+
+1. Instale o Pygame: `pip install pygame`
+
+1. Clone o repositório: `git clone https://github.com/seu-usuario/ecoflow.git`
+
+1. Execute: `python ecoflow.py`
 
 ---
 
-## 📊 Dashboard de KPIs em Tempo Real
-
-Abaixo estão as métricas industriais monitoradas e consolidadas dinamicamente no painel inferior do simulador:
-
-| Indicador | Unidade | Descrição Técnica | Foco de Análise |
-| :--- | :--- | :--- | :--- |
-| **Pegada de CO₂** | kg | Emissão total de carbono equivalente gerada pelo maquinário e transporte. | Descarbonização / ESG |
-| **Custo de Produção**| R$ | Gastos operacionais fixos e variáveis acumulados no ciclo. | Viabilidade Financeira |
-| **Taxa de Reuso** | % | Percentual de matéria-prima reaproveitada e reinserida na cadeia. | Economia Circular |
-| **OEE** | % | *Overall Equipment Effectiveness* (Eficiência Global do Equipamento). | Produtividade e Gargalos |
-
----
-
-## 🚀 Onde o EcoFlow Pode Ser Usado?
-
-O simulador possui uma arquitetura versátil projetada para atender diferentes frentes de mercado:
-*   **Educação:** Ferramenta didática para ensinar sustentabilidade e lógica de programação em universidades.
-*   **Indústrias:** Auxílio rápido no planejamento macro de processos para testar cenários ecológicos.
-*   **Consultoria:** Suporte visual para consultores apresentarem cenários de transição verde para clientes.
-*   **Governo & ONGs:** Formulação de dinâmicas para programas de incentivo à reciclagem e conscientização pública.
-
----
-
-## 💻 Como Executar o Simulador
-
-### Pré-requisitos
-*   Python 3.10 ou superior instalado.
-*   Biblioteca Pygame.
-
-### Instalação e Execução
-1. Clone este repositório para sua máquina local:
-   ```bash
-   git clone [https://github.com/seu-usuario/ecoflow-industrial.git](https://github.com/seu-usuario/ecoflow-industrial.git)
+*Este projeto reflete minha paixão por transformar dados em decisões estratégicas, unindo os fundamentos da Engenharia de Produção com a potência da tecnologia.*
