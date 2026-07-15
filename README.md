@@ -57,6 +57,28 @@ O motor de simulação utiliza o algoritmo de **Busca em Largura (BFS)** para pe
 
 - **Engenharia de Produção:** Gestão de Processos, Sustentabilidade Industrial, Logística Reversa, Análise de KPIs.
 
+## 🚀 Roadmap & Visão de Futuro (PM/PO Mindset)
+
+Como gestor do produto **EcoFlow**, identifiquei oportunidades estratégicas para evoluir o simulador, focando em aumentar o valor analítico para o usuário final e a escalabilidade da solução:
+
+### 1. Integração e Analytics
+
+- **Exportação de Dados:** Implementação de funcionalidade para exportar resultados de simulação em formatos `.csv` ou `.xlsx`, permitindo análises profundas em ferramentas como **Power BI** e **Tableau**.
+
+- **Histórico de Cenários:** Desenvolvimento de um banco de dados local para armazenar diferentes configurações de linha de produção e permitir a comparação de performance entre cenários (A/B Testing de processos).
+
+### 2. Engenharia de Produção Avançada
+
+- **Simulação de Monte Carlo:** Introdução de variáveis aleatórias (probabilidade de falha, variabilidade de tempo de ciclo) para simular a incerteza real do ambiente fabril e calcular a confiabilidade do sistema.
+
+- **Análise de ROI (Retorno sobre Investimento):** Módulo para calcular o tempo de retorno financeiro ao implementar tecnologias sustentáveis (ex: painéis solares), unindo indicadores ambientais a indicadores financeiros.
+
+### 3. Escalabilidade do Produto
+
+- **Editor No-Code de Blocos:** Interface para que o usuário configure as propriedades técnicas e os KPIs de novos blocos sem a necessidade de alteração direta no código-fonte.
+
+- **Módulo de Logística Externa:** Expansão do simulador para incluir o impacto de fornecedores e transporte de longa distância na pegada de carbono total (Scope 3).
+
 ## 🚀 Como Executar
 
 1. Instale o Pygame: `pip install pygame`
@@ -64,7 +86,7 @@ O motor de simulação utiliza o algoritmo de **Busca em Largura (BFS)** para pe
 1. Clone o repositório: `git clone https://github.com/seu-usuario/ecoflow.git`
 
 1. Execute: `python ecoflow.py`
-
 ---
 
-*Este projeto reflete minha paixão por transformar dados em decisões estratégicas, unindo os fundamentos da Engenharia de Produção com a potência da tecnologia.*
+*Esta visão de futuro reflete o compromisso com a melhoria contínua e a busca por soluções que integrem tecnologia, dados e eficiência operacional.*
+
